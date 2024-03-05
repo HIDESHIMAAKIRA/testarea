@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "../demo"
+		},
+		{
+			"name": "testarea",
+			"path": "../demo/testarea"
+		}
+	],
+	"settings": {
+		"java.compile.nullAnalysis.mode": "automatic"
+	}
+}
