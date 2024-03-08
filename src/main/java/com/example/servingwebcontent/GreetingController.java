@@ -10,7 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.example.accessingdatamysql.customer;
+import com.example.accessingdatamysql.actor;
 
 @Controller
 public class GreetingController {
@@ -22,11 +22,14 @@ public class GreetingController {
 	
 	//http://localhost:8080/
 	
-    String query = "SELECT * from customer";
-    List<customer> customer = jdbcTemplate.query(query, new BeanPropertyRowMapper<>(customer.class));
+    String query = "SELECT * from actor";
+    List<actor> customer = jdbcTemplate.query(query, new BeanPropertyRowMapper<>(actor.class));
 	
 	model.addAttribute("name", name);
 	model.addAttribute("DB", customer.toString());
+
+	//C:\Users\seven> net stop mysql83
+	//C:\Users\seven> net start mysql83
 
 		return "greeting";
 	}
